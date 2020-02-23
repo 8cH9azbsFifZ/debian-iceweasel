@@ -1,4 +1,4 @@
-FROM debian:buster-slim
+FROM debian:buster
 
 MAINTAINER Gerolf Ziegenhain <gerolf.ziegenhain@gmail.com>
 
@@ -20,6 +20,8 @@ RUN wget -O - https://github.com/novnc/websockify/archive/v0.9.0.tar.gz | tar -x
 RUN apt-get -y install iceweasel
 RUN apt-get -y install pcmanfm
 RUN apt-get -qqy autoclean && rm -rf /tmp/* /var/tmp/*
+
+USER 1000:1000
 
 EXPOSE 8080
 
