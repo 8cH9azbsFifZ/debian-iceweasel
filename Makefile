@@ -1,4 +1,4 @@
-VER=0.2
+VER=0.3
 build:
 	docker build . -t asdlfkj31h/iceweasel:${VER} -t iceweasel
 
