@@ -1,9 +1,9 @@
+VER=0.2
 build:
-	docker build . -t iceweasel
-	docker build . -t asdlfkj31h/iceweasel:0.2
+	docker build . -t asdlfkj31h/iceweasel:${VER} -t iceweasel
 
 run:
 	docker-compose up --build
 
 push:
-	docker push asdlfkj31h/iceweasel:0.2
+	docker push asdlfkj31h/iceweasel:${VER}
